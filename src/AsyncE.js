@@ -6,13 +6,24 @@ function AsnycE() {
   // Best Practices:
   useEffect(() => {
     async function fetcher() {
-      const info = await fetch(
-        'https://jsonplaceholder.typicode.com/todos/1'
-      ).then((d) => d.json());
+      const p = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+      const info = await p.json();
+      console.log(p);
       setData(info.title);
     }
     fetcher();
   }, []);
+  // Better Practise:
+  // useEffect(() => {
+  //   async function fetcher() {
+  //     const p = await fetch(
+  //       'https://jsonplaceholder.typicode.com/todos/1'
+  //     ).then((data) => data.json());
+  //     setData(p.title);
+  //   }
+  //   fetcher();
+  // }, []);
   // Bad Practise:
   // useEffect(async () => {
   //   const inf = await fetch(
