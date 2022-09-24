@@ -3,6 +3,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
 
 const Callback = () => {
+  const [cnt, setCnt] = useState(0);
   const obj1 = useMemo(() => {
     console.log('inside Memo');
     return () => <p>Memoized p tag by useMemo</p>;
@@ -15,8 +16,8 @@ const Callback = () => {
 
   return (
     <>
-      <h1>useMemo: {obj1()}</h1>
-      <h1>useCallback: {obj2()}</h1>
+      <h1 onClick={() => setCnt(Math.random())}>useMemo: {obj1()}</h1>
+      <h1 onClick={() => setCnt(Math.random())}>useCallback: {obj2()}</h1>
     </>
   );
 };

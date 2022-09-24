@@ -31,13 +31,14 @@ export default function App() {
   });
   return (
     <div>
-      <Context.Provider value={{ state, dispatch }}>
+      <Callback />
+      {/* <Context.Provider value={{ state, dispatch }}>
         <h1> Revision of hooks</h1>
         <Child />
       </Context.Provider>
       <p>Custom Hook(useCounter):{cnt}</p>
       <button onClick={() => add()}>+</button>{' '}
-      <button onClick={() => sub()}>-</button>
+      <button onClick={() => sub()}>-</button> */}
     </div>
   );
 }
