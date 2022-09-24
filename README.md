@@ -1,3 +1,1 @@
-# react-yyxr58
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-yyxr58)
+For revision purpose to understand the functionality and usecase os most important react hooks.
