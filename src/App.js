@@ -8,6 +8,7 @@ import Expensive from './Expensive.js'; // germane to useMemo
 import Callback from './Callback.js'; // germane to useCallback
 import Context from './Store.js'; // germane to useContext
 import Child from './Child.js'; // germane to useContext
+import useCounter from './useCounter'; // germane to custom hooks
 function reducer(state, action) {
   switch (action.type) {
     case 'DARK_THEME':
@@ -24,6 +25,7 @@ function reducer(state, action) {
 }
 
 export default function App() {
+  const [cnt, add, sub] = useCounter(10);
   const [state, dispatch] = useReducer(reducer, {
     theme: 'dark',
   });
@@ -33,6 +35,9 @@ export default function App() {
         <h1> Revision of hooks</h1>
         <Child />
       </Context.Provider>
+      <p>Custom Hook(useCounter):{cnt}</p>
+      <button onClick={() => add()}>+</button>{' '}
+      <button onClick={() => sub()}>-</button>
     </div>
   );
 }
