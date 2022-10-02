@@ -1,1 +1,1 @@
-For revision purpose to understand the functionality and usecase os most important react hooks.
+For revision purpose to understand the functionality and usecase of most important react hooks.
